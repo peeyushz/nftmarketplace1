@@ -50,7 +50,14 @@ app.use(morgan('tiny'));
 app.use(helmet({
     crossOriginResourcePolicy: false,
   }));
-app.use(cors());
+app.use(cors({
+  "Access-Control-Allow-Origin" : "*"
+}));
+// app.use(function (request, response, next) {
+//   response.header("Access-Control-Allow-Origin", "*");
+//   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 // mongodb connection
 connectDB();

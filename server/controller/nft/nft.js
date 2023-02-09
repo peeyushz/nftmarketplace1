@@ -158,7 +158,7 @@ exports.marketNFTOwner = async(req,res) => {
                     return res.status(200).send({ success: true, msg: "data found", data: data, errors: ''});
                 })
     
-              return res.status(200).send({ success: true, msg: "data found", data: data, errors: ''});
+              // return res.status(200).send({ success: true, msg: "data found", data: data, errors: ''});
           }else{
                 let data = []
                 return res.status(200).send({ success: false, msg: "no data found", data: data, errors: ''});
